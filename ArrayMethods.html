@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ArrayMethods</title>
+</head>
+
+<body>
+<script>
+    const a = [18,9,16,12,30];
+     // a.Every Method
+    var count = 0;
+    for(var i=0; i<a.length; i++){
+          if(a[i] <= 18)
+                count++;
+          else{
+                console.log("false");
+                break;
+          }
+       if(count == a.length){
+           console.log("true");
+           break;      
+        } 
+    }
+
+    // b.Some Method
+    count = 0;
+    for(var i = 0; i<a.length; i++){
+        if(a[i] > 18){
+            console.log("true");
+            count++;
+            break;
+        }
+        else
+             continue;
+      if(count == 0)
+          console.log("false");
+    }
+
+    //Reduce
+    var val = 0;
+    const n = [180,90,80];
+    val = n[0];
+    for(var i=1; i<n.length; i++)
+             val = val - n[i]; 
+      console.log(val);
+
+    //forEach
+    for(var i = 0; i<a.length; i++)
+              console.log(a[i]);
+
+    //findIndex
+    for(var i=0; i<a.length; i++)
+    {
+        if(a[i] == 30)
+             console.log(i);
+    }          
+
+    //filter
+    const b = [];
+    for(var i=0; i<a.length; i++)
+    {
+         if(a[i] <= 18)
+              b.push(a[i]);
+    }
+    console.log(b);
+
+    //find
+    count = 0;
+    for(var i=0; i<a.length; i++)
+    {
+          if(a[i] == 2){
+               count++;
+               console.log(a[i]);
+            }
+          else 
+                continue;            
+    }
+    if(count == 0)
+             console.log('-1'); 
+  
+    //map
+    var c = [a.length];
+    for(var i = 0; i<a.length; i++)
+           c[i] = 'Apple';
+
+      console.log(c);     
+
+
+</script>
+</body>
+</html>
