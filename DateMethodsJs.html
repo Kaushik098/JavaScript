@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> DateMethods </title>
+    </head>
+
+    <body>
+        <script>
+             var d = new Date();
+             console.log(d);
+
+             console.log(d.constructor.name);
+             console.log(typeof d); 
+    
+             console.log(d.getDate());
+             console.log(d.getDay());
+             console.log(d.getFullYear());
+             console.log(d.getHours());
+             console.log(d.getMilliseconds());
+             console.log(d.getMinutes());
+             console.log(d.getMonth());
+             console.log(d.getSeconds());
+             console.log(d.getTime());
+
+             //UTCDate(), UTCMiilliseconds.
+             console.log(d.getUTCDate());
+             console.log(d.getUTCMilliseconds());             
+
+             var e = new Date("Mar 25 2020");
+             console.log(e.getUTCDate());
+
+
+             //parse - converts date to time
+             var a = Date.parse("Mar 25 2020");
+             console.log(a);
+             console.log(typeof a);
+             //now
+             console.log(Date.now());
+
+             console.log(d.toDateString());
+             console.log(d.toISOString()); // International Standard
+             console.log(d.toJSON()); //Return Date object as a String 
+
+             //toLocaleDateString()
+             //toLocaleTimeString()
+             console.log(d.toLocaleDateString());             
+             console.log(d.toLocaleTimeString());
+
+            //valueOf
+            var b = d.valueOf();
+            console.log(b);
+            console.log(typeof b);
+             
+        </script>
+    </body>
+</html>
